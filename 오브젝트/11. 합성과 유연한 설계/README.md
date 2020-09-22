@@ -144,4 +144,5 @@ Phone phone = new Phone(
 물론 TaxablePolicy 와 RateDiscountablePolicy의 순서를 바꾼다던지 해도 무리가 없다.  
 
 현재 구조에서 새로운 정책을 추가하고 싶으면 클래스 하나만 추가하고 조합하면 해결이 된다.  
+***
  
