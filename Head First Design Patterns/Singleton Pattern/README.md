@@ -149,4 +149,12 @@ public class Singleton{
 
 volatile 키워드를 사용해서 멀티스레딩을 쓰더라도 uniqueInstance 변수가 Singleton 인스턴스로 초기화 되는 과정이 올바르게 진행되도록 할 수 있다. 상세 이유는 밑 포스팅을 참조
 
-[자바에서 volatile 이란?](https://bepoz-study-diary.tistory.com/160)
+[자바에서 volatile 이란?](https://bepoz-study-diary.tistory.com/160)  
+***
+추가적으로 보충하자면,  
+싱글턴 패턴을 사용할 때 주의해야 될점은 다음과 같다.  
+1. 싱글턴은 무상태(stateless)로 설계해야 한다.  
+2. 특정 클라이언트에 의존적인 필드가 있으면 안된다.  
+3. 특정 클라이언트가 값을 변경할 수 있는 필드가 있으면 안된다.  
+4. 가급적 읽기만 가능해야 한다.  
+5. 필드 대신에 자바에서 공유되지 않는 지역변수, 파라미터, ThreadLocal 등을 사용해야 한다.  
