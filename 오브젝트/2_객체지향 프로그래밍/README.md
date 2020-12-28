@@ -1,6 +1,6 @@
-## 객체지향 프로그래밍
+# 객체지향 프로그래밍
 
-### 영화 예매 시스템
+## 영화 예매 시스템
 
 영화를 예매하는 시스템을 예시로 든다.  
 
@@ -15,9 +15,9 @@
 
 <br/>
 
-### 객체지향 프로그래밍을 향해
+## 객체지향 프로그래밍을 향해
 
-#### 협력, 객체, 클래스
+### 협력, 객체, 클래스
 
 진정한 객체지향 패러다임으로의 전환은 클래스가 아닌 객체에 초점을 맞출 때에만 얻을 수 있다.  
 
@@ -27,7 +27,7 @@
 
 <br/>
 
-#### 도메인의 구조를 따르는 프로그램 구조
+### 도메인의 구조를 따르는 프로그램 구조
 
 소프트웨어는 사용자가 원하는 어떤 문제를 해결하기 위해 만들어진다. 여오하 예매 시스템의 목적은 영화를 좀 더 쉽고 빠르게 예매하려는 사용자의 문제를 해결하는 것이다. 이처럼 문제를 해결하기 위해 사용자가 프로그램을 사용하는 분야를 **도메인**이라고 부른다.  
 
@@ -36,7 +36,7 @@
 
 <br/>
 
-#### 클래스 구현하기
+### 클래스 구현하기
 
 ```java
 public class Screening{
@@ -79,7 +79,7 @@ public class Screening{
 
 <br/>
 
-#### 협력하는 객체들의 공동체
+### 협력하는 객체들의 공동체
 
 ```java
 public class Screening{
@@ -163,7 +163,7 @@ public class Reservation{
 
 <br/>
 
-#### 협력에 관한 짧은 이야기
+### 협력에 관한 짧은 이야기
 
 객체는 다른 객체의 인터페이스에 공개된 행동을 수행하도록 **요청**할 수 있다.  
 요청을 받은 객체는 자율적인 방법에 따라 요청을 처리한 후 **응답**한다.  
@@ -173,9 +173,9 @@ public class Reservation{
 
 <br/>
 
-### 할인 요금 구하기
+## 할인 요금 구하기
 
-#### 할인 요금 계산을 위한 협력 시작하기
+### 할인 요금 계산을 위한 협력 시작하기
 
 ```java
 public class Movie{
@@ -207,7 +207,7 @@ calculateMovieFee 메서드는 discountPolicy에 calculateDiscountAmount 메세�
 
 <br/>
 
-#### 할인 정책과 할인 조건
+### 할인 정책과 할인 조건
 
 ```java
 public abstract class DiscountPolicy{
@@ -307,13 +307,13 @@ public class PercentDiscountPolicy extends DiscountPolicy{
 
 <br/>
 
-#### 할인 정책 구성하기
+### 할인 정책 구성하기
 
 Movie의 생성자는 오직 하나의 DiscountPolicy 인스턴스만 받을 수 있도록 선언돼 있다. 반면 DiscountPolicy의 생성자는 여러 개의 DiscountCondition 인스턴스를 허용한다. 
 
 <br/>
 
-### 상속과 다형성
+## 상속과 다형성
 
 Movie 클래스는 DiscountPolicy 클래스와 연결돼있지 AmountDiscountPolicy 나 PercentDiscountPolicy와는 연결되어 있지 않다.  
 코드에서는 그렇지만 실행 시점에서는 각각의 할인정책 인스턴스에 의존하게 된다.  
@@ -326,14 +326,14 @@ Movie 클래스는 DiscountPolicy 클래스와 연결돼있지 AmountDiscountPol
 
 <br/>
 
-#### 차이에 의한 프로그래밍
+### 차이에 의한 프로그래밍
 
 클래스를 추가하고자 하는데 그 클래스가 기존의 어떤 클래스와 매우 흡사하다고 가정했을 때 상속을 이용해서 코드를 재사용한다.  
 이렇게 부모 클래스와 다른 부분만을 추가해서 새로운 클래스를 쉽고 빠르게 만드는 방법을 **차이에 의한프로그래밍 **이라고 부른다.  
 
 <br/>
 
-#### 상속과 인터페이스
+### 상속과 인터페이스
 
 상속이 가치 있는 이유는 부모 클래스가 제공하는 모든 인터페이스를 자식 클래스가 물려받을 수 있기 때문이다.  
 
@@ -353,7 +353,7 @@ public Class Movie{
 
 <br/>
 
-#### 다형성
+### 다형성
 
 코드 상에서 Movie 클래스는 DiscountPolicy 클래스에게 메세지를 전송하지만 실행 시점에 실제로 실행되는 메서드는 Movie와 협력하는 객체의 실제 클래스가 무엇인지에 따라 달라진다. 다시 말해서 Movie는 동일한 메세지를 전송하지만 실제로 어떤 메서드가 실행될 것인지는 메세지를 수신하는 객체의 클래스가 무엇이냐에 따라 달라진다. 이를 **다형성**이라고 부른다.  
 
@@ -365,9 +365,9 @@ public Class Movie{
 
 <br/>
 
-### 추상화와 유연성
+## 추상화와 유연성
 
-#### 추상화의 힘
+### 추상화의 힘
 
 이번 장 예시로 추상화의 장점을 살펴보면 다음과 같다.  
 
@@ -380,7 +380,7 @@ public Class Movie{
 
 <br/>
 
-#### 유연한 설계
+### 유연한 설계
 
 ```java
 public class Movie{
@@ -413,7 +413,7 @@ public Class NoneDiscountPolicy extends DiscountPolicy{
 
 <br/>
 
-#### 추상 클래스와 인터페이스 트레이드오프
+### 추상 클래스와 인터페이스 트레이드오프
 
 NoneDiscountPolicy 클래스에서 getDiscountAmount() 메서드가 어떤 값을 반환하더라도 상관이 없다는 것을 알 수가 있다.  
 
@@ -454,7 +454,7 @@ public class NoneDiscountPolicy implements DiscountPolicy{
 
 <br/>
 
-#### 코드 재사용
+### 코드 재사용
 
 상속은 코드를 재사용하기 위해 널리 사용되는 방법이다.  
 그러나 객체지향 설계에서는 코드 재사용을 위해서는 상속보다는 **합성(composition)** 이 더 좋은 방법이다.  
@@ -464,7 +464,7 @@ public class NoneDiscountPolicy implements DiscountPolicy{
 
 <br/>
 
-#### 상속
+### 상속
 
 상속은 객체지향에서 코드를 재사용하기 위해 널리 사용되는 기법이지만 **캡슐화를 위반**하고, **설계를 유연하지 못하게** 만든다.  
 
@@ -474,7 +474,7 @@ public class NoneDiscountPolicy implements DiscountPolicy{
 
 <br/>
 
-#### 합성
+### 합성
 
 인터페이스에 정의된 메세지를 통해서만 코드를 재사용하는 방법을 **합성**이라고 부른다.  
 
