@@ -282,4 +282,4 @@ public abstract class AdditionalRatePolicy implements RatePolicy {
 
 부모 클래스에서 구현된 메서드를 자식 클래스에서 오버라이딩할 때 파라미터 타입을 부모 클래스에서 사용한 파라미터의 슈퍼타입을 ㅗ지정할 수 있는 특성을 **파라미터 타입 반공변성**이라고 부른다. (자바는 지원하지 않는다)  
 
-<br/>
+***
